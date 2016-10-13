@@ -2,10 +2,14 @@ This is a sample project I gain practial experiences of building Single Page App
 Visual Studio Community 2015
 
 How is works:
-1. Products page: A list of current products with Edit/Delete/Place Order actions of each item. An Add Product button. Only logged in user can add, edit and delete products. 
+1. Login details: 
+User name: admin
+Password: 123123
+
+2. Products page: A list of current products with Edit/Delete/Place Order actions of each item. An Add Product button. Only logged in user can add, edit and delete products. 
 Click 'Place Order' button to popup the order dialog and then submit an order, after a successful submission, the current view will be redirect to Orders tab to view the order list.
 
-2. Orders page: A list of current orders with View and Delete actions of each item. Only logged in user can delete orders.
+3. Orders page: A list of current orders with View and Delete actions of each item. Only logged in user can delete orders.
 
 Structure: /scripts/Spa - Single page application root path.
 

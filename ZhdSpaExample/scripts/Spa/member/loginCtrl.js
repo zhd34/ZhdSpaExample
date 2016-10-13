@@ -26,10 +26,14 @@
             if (isLoggedIn) {
                 // redirect back to where it was
                 var previousState = $rootScope.previousState;
-                $location.url(previousState);
+                if (previousState) {
+                    $location.url(previousState);
+                } else {
+                    $location.url('/');
+                }
             } else {
                 $scope.loginResult.visible = true;
-                $scope.loginResult.message = 'Incorrect user name or password.';
+                $scope.loginResult.message = 'Incorrect user name or password. Please use "admin" as username and "123123" as password.';
             }
         }
     }
