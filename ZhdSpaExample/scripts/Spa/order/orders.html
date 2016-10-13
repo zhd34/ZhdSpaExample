@@ -1,0 +1,31 @@
+﻿<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">Order Id</div>
+                    <div class="col-xs-12 col-sm-2">Date</div>
+                    <div class="col-xs-12 col-sm-2">Total</div>
+                    <div class="col-xs-12 col-sm-2"></div>
+                </div>
+            </li>
+            <li class="list-group-item" data-ng-repeat="order in orderList">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        {{ order.id }}
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        {{ order.date }}
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        ${{ order.product.price * order.quality }}
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <span><a href="#/orders/vieworder/{{ order.id }}">View</a></span>
+                        <span data-ng-show="membershipService.isLoggedIn()"> | <a href data-ng-click="deleteOrder(order.id)">Delete</a></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

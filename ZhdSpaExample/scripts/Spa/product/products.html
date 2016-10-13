@@ -1,0 +1,35 @@
+﻿<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">Product Id</div>
+                    <div class="col-xs-12 col-sm-3">Name</div>
+                    <div class="col-xs-12 col-sm-3">Price</div>
+                    <div class="col-xs-12 col-sm-3"></div>
+                </div>
+            </li>
+            <li class="list-group-item" data-ng-repeat="product in productList">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                        {{ product.id }}
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        {{ product.name }}
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        ${{ product.price }}
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <span><a href="#/product/edit/{{ product.id }}">Edit</a> | </span>
+                        <span data-ng-show="membershipService.isLoggedIn()"><a href data-ng-click="deleteProduct(product.id)">Delete</a> | </span>
+                        <span><a href data-ng-click="placeOrder(product.id)">Place Order</a></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-12">
+        <a class="btn btn-default" href="#/product/add" role="button">Add New</a>
+    </div>
+</div>

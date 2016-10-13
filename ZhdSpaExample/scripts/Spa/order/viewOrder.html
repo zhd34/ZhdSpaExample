@@ -1,0 +1,59 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">View Order</div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        Order ID
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        {{ viewOrderViewModel.id }}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        Product
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        {{ viewOrderViewModel.product.name }} - (${{ viewOrderViewModel.product.price }})
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        Quality
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        {{ viewOrderViewModel.quality }}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        Total
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        {{ 1 + 1 }}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        Date
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        {{ viewOrderViewModel.date }}
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <a href="#/orders" class="btn btn-default">Back</a>
+    </div>
+</div>

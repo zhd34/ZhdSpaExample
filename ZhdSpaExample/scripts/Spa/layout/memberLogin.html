@@ -1,0 +1,36 @@
+﻿<div id="userInfo">
+    <form data-ng-hide="isLoggedIn()" role="form" name="memberLoginForm" novalidate angular-validator angular-validator-submit="login()">
+        <div class="row">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6">
+                <div class="col-xs-4 form-group">
+                    <label for="userName">User Name</label>
+                    <input type="text" id="userName" name="userName" class="form-control" required data-ng-model="loginViewModel.userName" />
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required data-ng-model="loginViewModel.password" />
+                </div>
+                <div class="col-xs-4 text-right">
+                    <label for="">&nbsp;</label>
+                    <button class="form-control btn btn-default" type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6">
+                <div class="col-xs-12">
+                    <p class="text-danger" data-ng-show="loginResult.visible">{{ loginResult.message }}</p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="row" data-ng-show="isLoggedIn()">
+        <div class="col-xs-6"></div>
+        <div class="col-xs-6 text-right">
+            Hi, <strong>{{ membershipService.getCurrentUser().userName }}</strong>. <button class="btn btn-default" data-ng-click="logout()">Logout</button>
+        </div>
+    </div>
+</div>

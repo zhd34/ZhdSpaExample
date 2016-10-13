@@ -1,0 +1,27 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">Place an order</div>
+    <div class="panel-body">
+        <form novalidate role="form" name="placeOrderForm" angular-validator angular-validator-submit="placeOrder()">
+            <div class="row">
+                <div class="col-xs-12">
+                    {{ placeOrderViewModel.product.name }}
+                    <strong>$ {{ placeOrderViewModel.product.price }}</strong>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    <label for="orderQuality">Quality</label>
+                    <input type="number" class="form-control" id="orderQuality" name="orderQuality" placeholder="Product name..." data-ng-model="placeOrderViewModel.quality" 
+                           validate-on="blur" validator="validateQuality() === true" invalid-message="validateQuality()" required required-message="'Quality is required'">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
