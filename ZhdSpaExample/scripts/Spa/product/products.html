@@ -1,7 +1,7 @@
 ﻿<div class="row">
     <div class="col-xs-12">
         <ul class="list-group">
-            <li class="list-group-item">
+            <li class="list-group-item hidden-xs">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">Product Id</div>
                     <div class="col-xs-12 col-sm-3">Name</div>
@@ -11,13 +11,13 @@
             </li>
             <li class="list-group-item" data-ng-repeat="product in productList">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3">
+                    <div class="hidden-xs col-sm-3">
                         {{ product.id }}
                     </div>
-                    <div class="col-xs-12 col-sm-3">
+                    <div class="col-xs-6 col-sm-3">
                         {{ product.name }}
                     </div>
-                    <div class="col-xs-12 col-sm-3">
+                    <div class="col-xs-6 col-sm-3">
                         ${{ product.price }}
                     </div>
                     <div class="col-xs-12 col-sm-3">

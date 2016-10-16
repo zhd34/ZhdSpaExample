@@ -9,10 +9,11 @@
             <a href="#/" class="navbar-brand">Zhd Spa Example</a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>asdf</li>
-                <li>asdf</li>
-                <li>asdf</li>
+            <ul class="nav navbar-nav visible-xs">
+                <li role="presentation" data-ng-class="{ active : $route.current.activeTab == 'products' }"><a data-ng-href="#/">Products</a></li>
+                <li role="presentation" data-ng-class="{ active : $route.current.activeTab == 'orders' }"><a data-ng-href="#/orders">Orders</a></li>
+                <li role="presentation" data-ng-show="isLoggedIn()"><a href data-ng-click="logoutTop()">Logout</a></li>
+                <li role="presentation" data-ng-hide="isLoggedIn()"><a href data-ng-click="loginTop()">Login</a></li>
             </ul>
         </div>
     </div>
