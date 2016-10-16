@@ -1,4 +1,4 @@
-This is a sample project I gain practial experiences of building Single Page Appication with AngularJS. 
+This is a sample project I gain practical experiences of building Single Page Appication with AngularJS. 
 Visual Studio Community 2015
 
 How is works:
